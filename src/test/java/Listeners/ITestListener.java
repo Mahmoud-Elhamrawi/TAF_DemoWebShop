@@ -7,19 +7,19 @@ import org.testng.ITestResult;
 public class ITestListener implements org.testng.ITestListener {
 
     public void onTestStart(ITestResult result) {
-        logUtility.info("the test case is starting  : "+result.getTestName());
+        logUtility.info("the test case is starting  : " + result.getName());
     }
 
     public void onTestSuccess(ITestResult result) {
-        logUtility.info("the test case is passing : "+result.getTestName());
+        logUtility.info("the test case is passing : " + result.getName());
     }
 
     public void onTestFailure(ITestResult result) {
-        logUtility.info("the test case is failing : "+result.getTestName());
+        logUtility.info("the test case is failing : " + result.getName());
     }
 
     public void onTestSkipped(ITestResult result) {
-        logUtility.info("the test case is skipping : "+result.getTestName());
+        logUtility.info("the test case is skipping : " + result.getName());
     }
 
     public void onStart(ITestContext context) {

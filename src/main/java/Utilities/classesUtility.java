@@ -50,7 +50,7 @@ public class classesUtility {
     //TODO:: timeStamp
     public static String timeStamp()
     {
-        return new SimpleDateFormat("yyyy-MM-dd  h-m-ssa").format(new Date());
+        return new SimpleDateFormat("yyyy-MM-dd-h-m-ssa").format(new Date());
     }
 
     //TODO:: take screenshot
