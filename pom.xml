@@ -21,6 +21,7 @@
         <log4j.version>2.24.1</log4j.version>
         <commionIO.version>2.18.0</commionIO.version>
         <javaFaker.version>1.0.2</javaFaker.version>
+        <jsonSimple.version>1.1.1</jsonSimple.version>
 
 
     </properties>
@@ -91,6 +92,15 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>${javaFaker.version}</version>
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>${jsonSimple.version}</version>
         </dependency>
 
 

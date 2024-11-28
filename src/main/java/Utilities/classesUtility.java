@@ -1,12 +1,19 @@
 package Utilities;
 
+
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONArray;
+import org.json.simple.*;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -69,6 +76,32 @@ public class classesUtility {
     }
 
 
+    //TODO::read data from array of json
+    String validLogin ="validLogin";
+private static String[] readJsonFile(String status) throws IOException, ParseException {
+    JSONParser jsonParser = new JSONParser();
+    FileReader reader = new FileReader("src/test/resources/testData/loginData.json");
+    Object object = jsonParser.parse(reader);
+    JSONObject jsonObject = (JSONObject)object;
+    JSONArray jsonArray = (JSONArray) jsonObject.get(status);
+
+    String arr[] = new String[jsonArray.size()];
+    for(int i =0;i<jsonArray.size();i++)
+    {
+        JSONObject users = (JSONObject) jsonArray.get(i);
+        String email = (String) users.get("email");
+        String pass = (String) users.get("password");
+        arr[i] = email +","+pass ;
+
+    }
+return arr;
+
+}
+
+
+public  static String[] readJsonDataLogin(String status) throws IOException, ParseException {
+    return readJsonFile(status);
+}
 
 
 }

@@ -19,7 +19,7 @@ public P01_LandingPage(WebDriver driver)
 
 
 private final By registerLink = By.linkText("Register");
-
+private  final By loginKink = By.linkText("Log in");
 
 public P01_LandingPage goToRegisterPage()
 {
@@ -27,7 +27,17 @@ public P01_LandingPage goToRegisterPage()
     return this;
 }
 
+public P06_LoginPage goToLoginPage()
+{
+    classesUtility.clickOnEle(driver,loginKink);
+    return new P06_LoginPage(driver);
+}
 
+
+    public boolean assertOnLoginPageUrl(String url)
+{
+    return new WebDriverWait(driver,Duration.ofSeconds(10)).until(ExpectedConditions.urlToBe(url));
+}
 
 public boolean assertOnRegisterPage(String expectUrl)
 {

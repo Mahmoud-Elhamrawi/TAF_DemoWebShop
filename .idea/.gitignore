@@ -1,3 +1,6 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+test-outputs/screenShots/
+test-outputs/allure-results/
+test-outputs/LOGS/

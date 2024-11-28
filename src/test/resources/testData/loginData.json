@@ -1,0 +1,32 @@
+{
+  "validLogin": [
+
+    {
+      "email":"mtestm@gmail.com",
+      "password": "123654"
+    }
+
+  ],
+
+
+  "invalidLogin": [
+    {
+      "email":" ",
+      "password": "123654"
+    },
+    {
+      "email":"mtestm@gmail.com",
+      "password": " "
+    },
+    {
+      "email":" ",
+      "password": " "
+    }
+
+  ]
+
+
+
+
+
+}
