@@ -11,13 +11,15 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.P01_LandingPage;
 import pages.P06_LoginPage;
+import pages.P09_categoryItemsPage;
+import pages.P10_AddToCartPage;
 
 import java.io.IOException;
 
 import static DriverFacory.DriverFactory.getDriver;
 
 @Listeners({IInvokedListener.class, ITestListener.class})
-public class TC02_LoginTest extends TC00_TestBase {
+public class TC05_AddToCartTest extends TC00_TestBase {
 
     @DataProvider
     public Object[] testDataValidLogin() throws IOException, ParseException {
@@ -27,29 +29,23 @@ public class TC02_LoginTest extends TC00_TestBase {
 
 
     @Test(dataProvider = "testDataValidLogin", priority = 1)
-    public void validLoginTC(String data) {
+    public void addProductsToCart(String data) {
+        //TODO:: login
         String users[] = data.split(",");
         new P01_LandingPage(getDriver()).goToLoginPage();
         Assert.assertTrue(new P01_LandingPage(getDriver()).assertOnLoginPageUrl(DataUtility.readPropertyFile("ENV", "LoginLink")));
-
         new P06_LoginPage(getDriver()).loginProcess(users[0], users[1]);
 
-    }
+        //TODO::go to category page
+        new P09_categoryItemsPage(getDriver()).moveToProducts();
+        Assert.assertTrue(new P09_categoryItemsPage(getDriver()).assertOnDesktopItemsUrl(DataUtility.readPropertyFile("ENV", "desktopItemsUrl")));
+
+        //TODO::add products to cart
+        new P10_AddToCartPage(getDriver())
+                .clickOnAddProductsBtn()
+                .getCountOnCartIcon();
 
 
-    @DataProvider
-    public Object[] testDataInValidLogin() throws IOException, ParseException {
-        return classesUtility.readJsonDataLogin("invalidLogin");
-
-    }
-
-    @Test(dataProvider = "testDataInValidLogin", priority = 2)
-    public void invalidLoginTC(String data) {
-        String users[] = data.split(",");
-        new P01_LandingPage(getDriver()).goToLoginPage();
-        Assert.assertTrue(new P01_LandingPage(getDriver()).assertOnLoginPageUrl(DataUtility.readPropertyFile("ENV", "LoginLink")));
-
-        new P06_LoginPage(getDriver()).loginProcess(users[0], users[1]);
     }
 
 

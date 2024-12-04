@@ -32,7 +32,6 @@ public class TC03_SearchTest extends TC00_TestBase {
                 .clickOnSearchBtnSubmit();
 
         Assert.assertTrue(new P08_ProductDetails(getDriver()).assertOnTextNotFound().contains("No products were found"));
-        // logUtility.info("mes:"+);
     }
 
 }
