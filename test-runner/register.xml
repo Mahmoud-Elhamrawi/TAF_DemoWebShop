@@ -1,0 +1,7 @@
+<suite name="SuiteRegister" verbose="1">
+    <test name="regressionTest">
+        <classes>
+            <class name="TestCases.TC01_RegisterTest"/>
+        </classes>
+    </test>
+</suite>

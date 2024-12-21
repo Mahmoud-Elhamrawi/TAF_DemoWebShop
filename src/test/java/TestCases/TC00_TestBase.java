@@ -16,7 +16,9 @@ public class TC00_TestBase {
 
     @BeforeMethod
     public void setUp() {
-        DriverFactory.setupDriver("edge");
+        String Browser = System.getProperty("browser") != null ? System.getProperty("browser") : DataUtility.readPropertyFile("ENV", "browser");
+
+        DriverFactory.setupDriver(Browser);
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         getDriver().get(DataUtility.readPropertyFile("ENV", "HomePage"));
     }

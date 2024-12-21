@@ -1,0 +1,7 @@
+<suite name="SuiteLogin" verbose="1">
+    <test name="LoginTest">
+        <classes>
+            <class name="TestCases.TC02_LoginTest"/>
+        </classes>
+    </test>
+</suite>

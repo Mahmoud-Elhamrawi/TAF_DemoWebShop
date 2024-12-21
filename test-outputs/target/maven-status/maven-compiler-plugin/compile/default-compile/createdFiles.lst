@@ -1,0 +1,14 @@
+pages\P08_ProductDetails.class
+pages\P09_categoryItemsPage.class
+pages\P03_ConfirmRegisterPage.class
+DriverFacory\DriverFactory.class
+pages\P05_LogOutPage.class
+pages\P01_LandingPage.class
+pages\P02_RegisterPage.class
+Utilities\logUtility.class
+pages\P07_SearchPage.class
+pages\P04_HomePage.class
+Utilities\DataUtility.class
+pages\P06_LoginPage.class
+pages\P10_AddToCartPage.class
+Utilities\classesUtility.class

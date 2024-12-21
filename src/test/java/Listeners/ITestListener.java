@@ -4,30 +4,56 @@ import Utilities.logUtility;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+
 public class ITestListener implements org.testng.ITestListener {
 
     public void onTestStart(ITestResult result) {
-        logUtility.info("the test case is starting  : " + result.getName());
+        try {
+            logUtility.info("the test case is starting  : " + result.getName());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onTestSuccess(ITestResult result) {
-        logUtility.info("the test case is passing : " + result.getName());
+        try {
+            logUtility.info("the test case is passing : " + result.getName());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onTestFailure(ITestResult result) {
-        logUtility.info("the test case is failing : " + result.getName());
+        try {
+            logUtility.info("the test case is failing : " + result.getName());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onTestSkipped(ITestResult result) {
-        logUtility.info("the test case is skipping : " + result.getName());
+        try {
+            logUtility.info("the test case is skipping : " + result.getName());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onStart(ITestContext context) {
-        logUtility.info("the suite is start...");
+        try {
+            logUtility.info("the suite is start...");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onFinish(ITestContext context) {
-        logUtility.info("the suite is finish...");
+        try {
+            logUtility.info("the suite is finish...");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

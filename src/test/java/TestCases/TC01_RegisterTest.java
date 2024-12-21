@@ -13,6 +13,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.*;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import static DriverFacory.DriverFactory.getDriver;
@@ -34,7 +35,7 @@ public class TC01_RegisterTest {
     }
 
     @Test
-    public void registerTC() {
+    public void registerTC() throws IOException {
 
         new P01_LandingPage(getDriver()).goToRegisterPage();
         logUtility.info("register page opening....");

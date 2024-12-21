@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-21T14:44:58 EET" name="SuiteLogin" finished-at="2024-12-21T14:45:19 EET" duration-ms="20921">
+    <groups>
+    </groups>
+    <test started-at="2024-12-21T14:44:58 EET" name="LoginTest" finished-at="2024-12-21T14:45:19 EET" duration-ms="20921">
+      <class name="TestCases.TC02_LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:44:59 EET" name="setUp" finished-at="2024-12-21T14:45:03 EET" duration-ms="4073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLoginTC(java.lang.String)[pri:1, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:04 EET" name="validLoginTC" data-provider="testDataValidLogin" finished-at="2024-12-21T14:45:05 EET" duration-ms="1619" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mtestm@gmail.com,123654]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:05 EET" name="tearDown" finished-at="2024-12-21T14:45:05 EET" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:05 EET" name="setUp" finished-at="2024-12-21T14:45:09 EET" duration-ms="3092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginTC(java.lang.String)[pri:2, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:09 EET" name="invalidLoginTC" data-provider="testDataInValidLogin" finished-at="2024-12-21T14:45:10 EET" duration-ms="1187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ,123654]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:10 EET" name="tearDown" finished-at="2024-12-21T14:45:10 EET" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:10 EET" name="setUp" finished-at="2024-12-21T14:45:13 EET" duration-ms="3295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginTC(java.lang.String)[pri:2, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:13 EET" name="invalidLoginTC" data-provider="testDataInValidLogin" finished-at="2024-12-21T14:45:14 EET" duration-ms="1094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mtestm@gmail.com, ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:15 EET" name="tearDown" finished-at="2024-12-21T14:45:15 EET" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:15 EET" name="setUp" finished-at="2024-12-21T14:45:18 EET" duration-ms="3126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginTC(java.lang.String)[pri:2, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:18 EET" name="invalidLoginTC" data-provider="testDataInValidLogin" finished-at="2024-12-21T14:45:19 EET" duration-ms="1054" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ , ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTC -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC02_LoginTest@15fa55a6]" started-at="2024-12-21T14:45:19 EET" name="tearDown" finished-at="2024-12-21T14:45:19 EET" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC02_LoginTest -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- SuiteLogin -->
+</testng-results>

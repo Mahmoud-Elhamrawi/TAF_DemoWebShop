@@ -1,0 +1,8 @@
+TestCases\TC00_TestBase.class
+TestCases\TC02_LoginTest.class
+TestCases\TC01_RegisterTest.class
+TestCases\TC05_AddToCartTest.class
+TestCases\TC04_CategoryItemsTest.class
+Listeners\IInvokedListener.class
+Listeners\ITestListener.class
+TestCases\TC03_SearchTest.class

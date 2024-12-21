@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.List;
 
 public class P10_AddToCartPage {
@@ -21,8 +22,8 @@ public class P10_AddToCartPage {
         this.driver = driver;
     }
 
-    ////input[contains(@class,'product-box-add-to-cart-button')]
-    public P10_AddToCartPage clickOnAddProductsBtn() {
+    // //input[contains(@class,'product-box-add-to-cart-button')]
+    public P10_AddToCartPage clickOnAddProductsBtn() throws IOException {
         allProducts = driver.findElements(btnAddToCart);//size 1
         logUtility.info("size :" + allProducts);
         for (int i = 1; i <= allProducts.size(); i++) {

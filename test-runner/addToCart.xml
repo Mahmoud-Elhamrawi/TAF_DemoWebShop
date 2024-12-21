@@ -1,0 +1,7 @@
+<suite name="SuiteAddToCartTest" verbose="1">
+    <test name="AddToCartTest">
+        <classes>
+            <class name="TestCases.TC05_AddToCartTest"/>
+        </classes>
+    </test>
+</suite>

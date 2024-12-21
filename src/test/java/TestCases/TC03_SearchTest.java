@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import pages.P07_SearchPage;
 import pages.P08_ProductDetails;
 
+import java.io.IOException;
+
 import static DriverFacory.DriverFactory.getDriver;
 
 @Listeners({IInvokedListener.class, ITestListener.class})
@@ -16,7 +18,7 @@ public class TC03_SearchTest extends TC00_TestBase {
 
 
     @Test(priority = 1)
-    public void validSearchTC() {
+    public void validSearchTC() throws IOException {
         new P07_SearchPage(getDriver())
                 .enterTextForSearch(DataUtility.readPropertyFile("ENV", "searchText"))
                 .clickOnOption();

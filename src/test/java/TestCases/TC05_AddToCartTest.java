@@ -29,7 +29,7 @@ public class TC05_AddToCartTest extends TC00_TestBase {
 
 
     @Test(dataProvider = "testDataValidLogin", priority = 1)
-    public void addProductsToCart(String data) {
+    public void addProductsToCart(String data) throws InterruptedException, IOException {
         //TODO:: login
         String users[] = data.split(",");
         new P01_LandingPage(getDriver()).goToLoginPage();
@@ -44,6 +44,11 @@ public class TC05_AddToCartTest extends TC00_TestBase {
         new P10_AddToCartPage(getDriver())
                 .clickOnAddProductsBtn()
                 .getCountOnCartIcon();
+
+// assert on success added message
+        // go to cart pag e
+        //1- cleat crt
+        //2- checkout
 
 
     }

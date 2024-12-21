@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.List;
 
 public class P07_SearchPage {
@@ -30,7 +31,7 @@ public class P07_SearchPage {
         return new P08_ProductDetails(driver);
     }
 
-    public P08_ProductDetails clickOnOption() {
+    public P08_ProductDetails clickOnOption() throws IOException {
         options = driver.findElements(By.xpath("//li[@class=\"ui-menu-item\"]"));//3
         logUtility.info("options " + options);
         for (int i = 1; i <= options.size(); i++) {

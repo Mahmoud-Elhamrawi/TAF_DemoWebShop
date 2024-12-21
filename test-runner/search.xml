@@ -1,0 +1,7 @@
+<suite name="SuiteSearch" verbose="1">
+    <test name="SearchTest">
+        <classes>
+            <class name="TestCases.TC03_SearchTest"/>
+        </classes>
+    </test>
+</suite>
