@@ -48,6 +48,13 @@ public class classesUtility {
         return driver.findElement(locator).getText();
     }
 
+    //TODO:: remove text
+    public static void removeText(WebDriver driver, By locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+        driver.findElement(locator).clear();
+
+    }
+
     //TODO:: scrolling
     public static void scroll(WebDriver driver, By locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(locator));

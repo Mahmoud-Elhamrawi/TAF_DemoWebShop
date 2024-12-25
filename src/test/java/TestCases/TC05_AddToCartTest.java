@@ -21,6 +21,7 @@ import static DriverFacory.DriverFactory.getDriver;
 @Listeners({IInvokedListener.class, ITestListener.class})
 public class TC05_AddToCartTest extends TC00_TestBase {
 
+
     @DataProvider
     public Object[] testDataValidLogin() throws IOException, ParseException {
         return classesUtility.readJsonDataLogin("validLogin");
@@ -45,9 +46,13 @@ public class TC05_AddToCartTest extends TC00_TestBase {
                 .clickOnAddProductsBtn()
                 .getCountOnCartIcon();
 
-// assert on success added message
-        // go to cart pag e
-        //1- cleat crt
+        Assert.assertTrue(new P10_AddToCartPage(getDriver()).getNotificationMsg().contains("The product has been added to your"));
+
+        new P10_AddToCartPage(getDriver())
+                .goToCartPage();
+        Assert.assertTrue(new P10_AddToCartPage(getDriver()).assertOnCartPage("https://demowebshop.tricentis.com/cart"));
+
+
         //2- checkout
 
 
