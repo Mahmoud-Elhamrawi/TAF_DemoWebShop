@@ -58,10 +58,10 @@ public class TC07_CheckOutTest extends TC00_TestBase {
         new P12_BillingAddressPage(getDriver())
                 .confirmOrder();
 
-        Assert.assertTrue(new P12_BillingAddressPage(getDriver()).assertOnUrlCompleteOrder("https://demowebshop.tricentis.com/checkout/completed/"));
-        Assert.assertEquals(new P12_BillingAddressPage(getDriver()).assertOnConfirmText(), "Your order has been successfully processed!");
+        Assert.assertTrue(new P13_ThankYouPage(getDriver()).assertOnUrlCompleteOrder("https://demowebshop.tricentis.com/checkout/completed/"));
+        Assert.assertEquals(new P13_ThankYouPage(getDriver()).assertOnConfirmText(), "Your order has been successfully processed!");
 
-        new P12_BillingAddressPage(getDriver()).continueOrder();
+        new P13_ThankYouPage(getDriver()).continueOrder();
 
         Assert.assertTrue(new P04_HomePage(getDriver()).assertOnHomePageUrl(DataUtility.readPropertyFile("ENV", "HomePage")));
 

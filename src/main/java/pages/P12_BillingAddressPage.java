@@ -16,8 +16,6 @@ public class P12_BillingAddressPage {
     private final By paymentMethodContinueBtn = By.cssSelector("div[id=\"payment-method-buttons-container\"] input");
     private final By paymentInfoContinueBtn = By.cssSelector("div[id=\"payment-info-buttons-container\"] input");
     private final By confirmationBtn = By.cssSelector("div[id=\"confirm-order-buttons-container\"] input");
-    private final By confirmText = By.cssSelector("div[class=\"title\"] strong");
-    private final By continueBtn = By.cssSelector("input[value=\"Continue\"]");
 
 
     public P12_BillingAddressPage(WebDriver driver) {
@@ -68,29 +66,11 @@ public class P12_BillingAddressPage {
     }
 
     //Confirm order
-    public P12_BillingAddressPage confirmOrder() {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(confirmationBtn));
+    public P13_ThankYouPage confirmOrder() {
         classesUtility.clickOnEle(driver, confirmationBtn);
-        return this;
-    }
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(confirmationBtn));
 
-
-    //Assert on url
-    public boolean assertOnUrlCompleteOrder(String expectUrl) {
-        //   new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/checkout/completed"));
-        return driver.getCurrentUrl().contains(expectUrl);
-    }
-
-
-    //Assert on confirm text
-    public String assertOnConfirmText() {
-        return driver.findElement(confirmText).getText();
-    }
-
-
-    public P04_HomePage continueOrder() {
-        classesUtility.clickOnEle(driver, continueBtn);
-        return new P04_HomePage(driver);
+        return new P13_ThankYouPage(driver);
     }
 
 
